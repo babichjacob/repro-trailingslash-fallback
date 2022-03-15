@@ -4,10 +4,10 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
 	kit: {
 		adapter: adapter({
-			fallback: "200.html",
+			fallback: "200.html", // "200/index.html" doesn't resolve this either
 		}),
 
-		// Only necessary to demonstrate that index.html is created successfully
+		// Only necessary to demonstrate that index.html, and other pages if they existed, will be created with the expected content
 		prerender: {
 			default: true,
 		},
